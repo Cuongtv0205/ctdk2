@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>giải PT bậc hai</title>
+</head>
+<body>
+<form name="nhap">
+    <p>Nhap a: </p>
+    <input type="text" name="a" />
+    <p>Nhập b:</p>
+    <input type="text" name="b"/>
+    <p>Nhập c:</p>
+    <input type="text" name="c"/>
+    <p>x1:</p>
+    <input type="text" name="d"/>
+    <p>x2:</p>
+    <input type="text" name="e"/>
+    <p>Nghiệm kép:</p>
+    <input type="text" name="f"/>
+    <p>
+        <label>
+            <input type="button" value="Click kết quả" onclick="ptbh()"/>
+        </label>
+    </p>
+</form>
+<script>
+    function ptbh() {
+        var a, b, c, delta, x, x1, x2;
+        a = document.nhap.a.value;
+        b = document.nhap.b.value;
+        c = document.nhap.c.value;
+        delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.write(" Phương trình vô nghiệm ");
+        } else if (delta == 0) {
+            x = -b / 2 * a;
+            document.nhap.f.value = x;
+        } else if (delta > 0) {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            document.nhap.d.value = x1;
+            x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.nhap.e.value = x2;
+        }
+    }
+</script>
+</body>
+</html>

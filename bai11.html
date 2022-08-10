@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhâp số điện');
+    let B1 = '1500';
+    let B2 = '1700';
+    let B3 = '1900';
+    let B4 = '2500';
+    let B5 = '3500';
+    if(a<50){
+        document.write('Số tiền điện là:' + (a*B1) + 'VND');
+    }else if(a<65){
+        document.write('Số tiền điện là:' + (a*B2) + 'VND');
+    }else if (a<80){
+        document.write('Số tiền điện là:' + (a*B3) + 'VND');
+    }else if(a<100){
+        document.write('Số tiền điện là:' + (a*B4) + 'VND');
+    }else{
+        document.write('Số tiền điện là:' + (a*B4) + 'VND');
+    }
+</script>
+</body>
+</html>
